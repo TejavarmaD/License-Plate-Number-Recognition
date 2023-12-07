@@ -1,0 +1,49 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <!-- File Upload Section -->
+    <div class="container mt-4">
+        <form action="#" method="POST" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="imageUpload" class="form-label">Upload Image</label>
+                <input type="file" class="form-control" id="imageUpload" name="image_name" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Upload</button>
+        </form>
+    </div>
+
+    {% if upload %}
+        <!-- Display Uploaded and Predicted Images -->
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <img class="img-fluid rounded" src="static/upload/{{ upload_image }}" alt="Uploaded Image">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <img class="img-fluid rounded" src="static/predict/{{ upload_image }}" alt="Predicted Image">
+                </div>
+            </div>
+            
+            <!-- Display Cropped Licence Plate Image and OCR Result -->
+            <table class="table table-bordered mt-4">
+                <thead>
+                    <tr>
+                        <th>Cropped Licence Plate Image</th>
+                        <th>Text</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img class="img-fluid" src="static/roi/{{ upload_image }}" alt="Cropped Licence Plate">
+                        </td>
+                        <td class="text-center align-middle bg-warning">
+                            <h2>{{ text }}</h2>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    {% endif %}
+
+{% endblock  %}
