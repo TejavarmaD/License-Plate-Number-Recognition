@@ -20,3 +20,24 @@ Clone the repository to your local machine:
 ```bash
 git clone https://github.com/your-github-username/license-plate-recognition.git
 cd license-plate-recognition
+
+Install the required Python packages:
+```bash
+pip install -r requirements.txt
+
+Make sure you ran the notebooks you will be getting hte weight which you have to put it under static/models:
+
+Running the Application:
+ Once all the prerequisites are installed,you can run the flask app:
+```bash
+python app.py
+
+After running the command, navigate to http://127.0.0.1:5000/ in your web browser to access the application.
+
+## Usage
+
+Upload an image through the web interface.
+Choose between the YOLO model and the deep learning model for license plate detection.
+View the results, including the detected license plate and its text.
+
+
