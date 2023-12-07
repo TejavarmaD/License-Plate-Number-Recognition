@@ -23,14 +23,14 @@ cd license-plate-recognition
 
 Install the required Python packages:
 ```bash
-pip install -r requirements.txt
+pip install -r requirements.txt```
 
 Make sure you ran the notebooks you will be getting hte weight which you have to put it under static/models:
 
 Running the Application:
  Once all the prerequisites are installed,you can run the flask app:
 ```bash
-python app.py
+python app.py```
 
 After running the command, navigate to http://127.0.0.1:5000/ in your web browser to access the application.
 
