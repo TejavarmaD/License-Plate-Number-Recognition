@@ -32,7 +32,8 @@ Make sure you ran the notebooks you will be getting hte weight which you have to
 Running the Application:
  Once all the prerequisites are installed,you can run the flask app:
 ```bash
-python app.py```
+python app.py
+```
 
 After running the command, navigate to http://127.0.0.1:5000/ in your web browser to access the application.
 
